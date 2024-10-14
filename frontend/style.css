@@ -1,0 +1,200 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #282c34; /* Fondo oscuro y moderno */
+    color: #fff; /* Texto blanco para buen contraste */
+}
+
+/* Pantalla de inicio */
+#startScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e3c72; /* Color base del fondo */
+    position: relative; /* Necesario para los elementos flotantes */
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Color llamativo para el título */
+}
+
+/* Efectos visuales dinámicos */
+.startScreenEffect {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: floating 8s ease-in-out infinite;
+}
+
+.startScreenEffect:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    left: 10%;
+    animation-duration: 6s;
+}
+
+.startScreenEffect:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 70%;
+    animation-duration: 7s;
+}
+
+.startScreenEffect:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    top: 75%;
+    left: 20%;
+    animation-duration: 5s;
+}
+
+/* Efecto de flotación */
+@keyframes floating {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.2);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Efecto para el botón de inicio */
+#startButton {
+    padding: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: blink 1.5s infinite; /* Efecto parpadeo */
+}
+
+#startButton:hover {
+    background-color: #ffeb3b;
+    transform: scale(1.1);
+}
+
+/* Efecto de parpadeo en el botón */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Pantalla de juego */
+#gameScreen {
+    display: none;
+    background-color: #00bfff;
+    width: 100vw;
+    height: 100vh;
+}
+
+#gameCanvas {
+    background-color: #00bfff;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Controles del juego */
+.controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+button:hover {
+    background-color: #d3d3d3;
+}
+
+@media (min-width: 600px) {
+    .controls {
+        flex-direction: row; /* Cambia a formato horizontal en pantallas grandes */
+        gap: 20px; /* Añade más espacio entre los botones */
+    }
+}
+
+/* Estilos para la ventana modal de pausa */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    z-index: 100; /* Para que se superponga al resto del contenido */
+}
+
+.modal-content {
+    background-color: #282c34; /* Fondo oscuro para el modal */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Color del título */
+}
+
+.modal-content button {
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #ffcc00; /* Botones amarillos */
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #ffeb3b; /* Cambio de color al pasar el mouse */
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}

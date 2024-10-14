@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pou Water Hop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Pantalla de inicio -->
+    <div id="startScreen" class="screen">
+        <h1>Pou Water Hop</h1>
+        <div class="startScreenEffect"></div>
+        <div class="startScreenEffect"></div>
+        <div class="startScreenEffect"></div>
+        <button id="startButton">Start Game</button>
+    </div>
+
+    <!-- Pantalla del juego -->
+    <div id="gameScreen" class="screen" style="display: none;">
+        <canvas id="gameCanvas"></canvas>
+        <div id="controls" class="controls">
+            <button id="pauseButton">Pausar</button>
+            <button id="resumeButton" style="display:none;">Reanudar</button>
+            <button id="exitButton">Salir</button>
+        </div>
+    </div>
+
+    <!-- Ventana modal de pausa -->
+    <div id="pauseModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Pausa</h2>
+            <button id="resumeButtonModal">Reanudar</button>
+            <button id="exitButtonModal">Salir</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
