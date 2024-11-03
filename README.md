@@ -3,6 +3,9 @@
 ## Introduction
 This repository contains the code and deployment configuration for **Water-Hop-2**, a game with separate frontend and backend services, designed to run on a Google Kubernetes Engine (GKE) cluster. The project features auto-scaling, load balancing, and fault tolerance in a distributed environment.
 
+You can view a demo of the game at [this link](https://irisrocio1979.github.io/water-hop---2/).
+This demo showcases how the game "Water-Hop" works. The interface includes interactive elements that you can explore.
+
 ## Requirements
 - Google Cloud Platform (GCP) account with GKE enabled
 - `gcloud` CLI
